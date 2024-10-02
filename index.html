@@ -22,6 +22,28 @@
     </header>
     <main>
         <h2>Enjoy Listening!</h2>
+        <div id="sort-controls">
+            <label for="sort-by">order by:</label>
+            <select id="sort-by">
+                <option value="title">title</option>
+                <option value="category">category</option>
+                <option value="mood">mood</option>
+                <option value="tempo">tempo</option>
+                <option value="fit">fit</option>
+            </select>
+            <label for="sort-order">order:</label>
+            <select id="sort-order">
+                <option value="asc">ascending</option>
+                <option value="desc">descending</option>
+            </select>
+            <label for="filter-by">filter by:</label>
+            <select id="filter-by">
+                <option value="all">show all</option>
+                <option value="instrumental">instrumental</option>
+                <option value="vocal">vocal</option>
+                <option value="teaser">teaser</option>
+            </select>
+        </div>
         <div id="music-list">
             <!-- Here the music items are dynamically inserted -->
         </div>

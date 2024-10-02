@@ -18,10 +18,10 @@ body {
 }
 
 @media screen and (min-width:980px) {
-     body { 
-      flex-direction: row-reverse;
-    }
+  body { 
+    flex-direction: row-reverse;
   }
+}
 header {
   flex: 30%;
   text-align: right;
@@ -79,6 +79,19 @@ main h2 {
   font-size: 1em;
 }
 
+#sort-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 80px;
+  color: #fff;
+  font-size: 0.8em;
+}
+#sort-controls select {
+  margin-right: 20px;
+}
+
 #music-list {
   overflow: auto;
   scrollbar-color: #D70000 transparent;
@@ -101,9 +114,20 @@ main h2 {
 }
 .player {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+a.download-link, a.download-link:visited,a.download-link:active {
+  color: #D70000;
+  font-size: 1em;
+  text-decoration: none;
+  font-size: 30px;
+  margin-left: 20px;
+}
+a.download-link:hover {
+  color: #fff;
 }
 
 .waveform {
@@ -161,14 +185,9 @@ main h2 {
 }
 
 .player button::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-style: solid;
+  content: '▶';
+  color: #D70000;
+  font-size: 30px;
 }
 
 .player button[data-playing="false"]::before {
@@ -179,7 +198,6 @@ main h2 {
 .player button[data-playing="true"]::before {
   width: 15px;
   height: 15px;
-  border-width: 0 5px;
-  border-color: #EB4926;
-  border-style: double;
+  border-width: 0;
+  content: "◼";
 }
