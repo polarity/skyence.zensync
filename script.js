@@ -67,9 +67,13 @@ function createMusicItem (music) {
   progressGradient.addColorStop((canvas.height * 0.7 + 3) / canvas.height, '#B1B1B1') // Bottom color
   progressGradient.addColorStop(1, '#B1B1B1') // Bottom color
 
-
   const item = document.createElement('div')
   item.className = 'music-item'
+
+  const title = document.createElement('h3')
+  title.className = 'music-title'
+  title.textContent = music.title
+  item.appendChild(title)
 
   const player = document.createElement('div')
   player.className = 'player'
@@ -126,10 +130,10 @@ function createMusicItem (music) {
   const metadata = document.createElement('div')
   metadata.className = 'metadata'
   metadata.innerHTML = `
-    <p>Category: <span class="tag">${music.category}</span></p>
-    <p>Fit: <span class="tag">${music.fit}</span></p>
-    <p>Mood: <span class="tag">${music.mood}</span></p>
-    <p>Tempo: <span class="tag">${music.tempo}</span></p>
+    <p><span class="tag-border-filled">${music.category}</span></p>
+    <p><span class="tag-border">fit</span><span class="tag">${music.fit}</span></p>
+    <p><span class="tag-border">mood</span><span class="tag">${music.mood}</span></p>
+    <p><span class="tag-border">tempo</span><span class="tag">${music.tempo}</span></p>
   `
   item.appendChild(metadata)
   return item

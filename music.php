@@ -20,6 +20,7 @@ foreach ($musicFiles as $musicFile) {
         }
         
         $musicList[] = [
+            'title' => $metaData['title'] ?? '',
             'file' => 'music/' . basename($musicFile),  // Add 'music/' prefix here
             'category' => $metaData['category'] ?? '',
             'fit' => $metaData['fit'] ?? '',
