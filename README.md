@@ -44,6 +44,7 @@ ZEN'SYNC is a web-based music library application that allows users to browse an
 - add a json file for every mp3 with the same filename
 - every json file looks like this:
    ```{
+   "title": "title of the track",
    "category": "instrumental",
    "fit": "titles, teaser",
    "mood": "melancholy",
